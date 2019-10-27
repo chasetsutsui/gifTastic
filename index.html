@@ -8,27 +8,42 @@
     <title>GifTastic!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 
 <body>
-    <!-- div to store the gif buttons -->
-    <div id="buttons"></div>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container">
+                <h1 class="display-4">GifTastic!</h1>
+            </div>
+        </div>
 
-    <!-- search form for gifs -->
-
-    <form id="gif-form">
-        <label for="gif-input">Add A Gif Button!</label>
+        <!-- div to store the gif buttons -->
+        <div id="buttons" class="text-center"></div>
         <br>
-        <input type="text" id="gif-input">
-        <br>
 
-        <!-- Button triggers new gif button to be added -->
-        <input id="add-gif" type="submit" value="Add A Gif!">
-    </form>
+        <!-- search form for gifs -->
 
-    <!-- div to store the populated gifs -->
-    <div id="gifs"></div>
+        <div class="text-center" id="searchdiv">
+            <form id="gif-form">
+                <label for="gif-input">Add A Gif Button!</label>
+                <br>
+                <input type="text" id="gif-input">
+                <br>
+
+                <!-- Button triggers new gif button to be added -->
+                <input id="add-gif" type="submit" value="Add A Gif!">
+            </form>
+        </div>
+
+
+
+        <!-- div to store the populated gifs -->
+        <div id="gifs"></div>
+    </div>
 
 
 

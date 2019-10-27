@@ -24,12 +24,14 @@ function generateButtons() {
     }
 }
 generateButtons();
-
-$(".tvShow-btn").on("click", function () {
+//on click function to generate gifs corresponding to the button clicked
+$(document).on("click", ".tvShow-btn", function () {
     $("#gifs").empty();
     console.log("click");
     var name = $(this).data("name");
     console.log(name);
+
+    //ajax call to the giphy api
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=tDzemBF34kCxtE9nJPQaplE7V1bheQGb&limit=10";
     $.ajax({
         url: queryURL,
@@ -57,7 +59,9 @@ $(".tvShow-btn").on("click", function () {
 
                 image.attr("data-animated", animated);
 
-                image.addClass("searchImage");
+                image.attr("data-mode", "still")
+
+                image.addClass("gifImage");
 
                 searchDiv.append(p);
 
@@ -70,10 +74,24 @@ $(".tvShow-btn").on("click", function () {
 
 })
 
+//on click function to add gif buttons correspoding to the user input
 $("#add-gif").on("click", function (event) {
     event.preventDefault();
-    var tvShow = ("#gif-input").val().trim();
-    tvShows.push(tvShow),
-        generateButtons();
-})
+    var name = $("#gif-input").val().trim();
+    tvShows.push(name);
+    console.log(name);
+    generateButtons();
+});
 
+//on click function to play/pause gifs
+$(document).on("click", ".gifImage", function () {
+    var imageMode = $(this).attr('data-mode');
+    if (imageMode === "still") {
+        $(this).attr("src", $(this).data("animated"));
+        $(this).attr("data-mode", "animated");
+    }
+    else if (imageMode === "animated") {
+        $(this).attr("src", $(this).data("still"));
+        $(this).attr("data-mode", "still");
+    }
+});
