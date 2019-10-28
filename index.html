@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vast+Shadow&display=swap" rel="stylesheet">
 
 
 </head>
@@ -22,27 +25,40 @@
         </div>
 
         <!-- div to store the gif buttons -->
-        <div id="buttons" class="text-center"></div>
+        <div id="buttons" class="text-center">
+        </div>
         <br>
 
         <!-- search form for gifs -->
+        <div class="row">
+            <div class="col-sm-4"></div>
 
-        <div class="text-center" id="searchdiv">
-            <form id="gif-form">
-                <label for="gif-input">Add A Gif Button!</label>
-                <br>
-                <input type="text" id="gif-input">
-                <br>
+            <div class="col-sm-4">
+                <div class="text-center" id="searchdiv">
+                    <form id="gif-form">
+                        <label for="gif-input">
+                            <h2>Add A New Gif Button!</h2>
+                        </label>
+                        <br>
+                        <input type="text" id="gif-input">
+                        <br>
 
-                <!-- Button triggers new gif button to be added -->
-                <input id="add-gif" type="submit" value="Add A Gif!">
-            </form>
+                        <!-- Button triggers new gif button to be added -->
+                        <input id="add-gif" type="submit" value="Add A Gif!">
+                    </form>
+                </div>
+            </div>
         </div>
+        <br>
 
 
 
         <!-- div to store the populated gifs -->
-        <div id="gifs"></div>
+
+        <div id="gifs">
+            <h3>Click A Button To Add Some Gifs!</h3>
+        </div>
+
     </div>
 
 
