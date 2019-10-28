@@ -35,8 +35,13 @@
     padding-bottom: 20px;
     border-style: solid;
     border-width: 4px;
+    margin-bottom: 20px;
 }
 
 h3, p{
     font-family: 'Finger Paint', cursive;
+}
+
+body{
+    background-color: grey;
 }
