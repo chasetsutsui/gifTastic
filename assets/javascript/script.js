@@ -32,7 +32,7 @@ $(document).on("click", ".tvShow-btn", function () {
     console.log(name);
 
     //ajax call to the giphy api
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=tDzemBF34kCxtE9nJPQaplE7V1bheQGb&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=tDzemBF34kCxtE9nJPQaplE7V1bheQGb&limit=10";
     $.ajax({
         url: queryURL,
         method: "GET"
